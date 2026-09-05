@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     app_name: str = "CS2 Analytics API"
     app_version: str = "1.0.0"
     cors_origins: Annotated[list[str], NoDecode] = ["*"]
+    gemini_api_key: str = ""
+    gemini_model: str = "gemini-2.5-flash"
+    analysis_backend: str = "mock"
 
     model_config = SettingsConfigDict(
         env_file=".env",
